@@ -1,0 +1,73 @@
+{% extends "app/base.html" %}
+{% load widget_tweaks %}
+
+{% block content %}
+<div id="image" class="big-bg">
+    <div class="contact-content wrapper">
+        <h2 class="page-title">フリーランスの宿コンタクト</h2>
+        
+    </div><!--/.contact-content-->
+</div>><!--/.contact-->   
+
+<div class="card text-center contact mx-auto rounded">
+    <div class="card-body">
+        <h2 class="mb-4">コンタクト</h2>
+        <form method="post">
+            {% csrf_token %}
+            <div class="mb-3">
+                {% render_field form.name class="form-control" placeholder="名前" %}
+            </div>
+            <div class="mb-3">
+                {% render_field form.email class="form-control" placeholder="メールアドレス" %}
+            </div>
+            <div class="mb-3">
+                {% render_field form.message class="form-control" placeholder="メッセージ" %}
+            </div>
+            <div class="mb-3">
+                <button class="btn btn-warning" type="submit"><i class="fas fa-paper-plane"></i> 送信する</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<section id="location">
+    <div class="wrapper">
+        <div class="location-info">
+            <h3 class="sub-title">フリーランスの宿</h3>
+            <p>
+                住所： 青森県八戸市<br>
+                〇〇〇〇〇〇〇 000-22-1<br>
+                〇〇〇〇<br>
+                電話： 03-1111-1111<br>
+                営業時間： 10:00〜20:00<br>
+                休日：水曜
+            </p>
+        </div><!-- /.location-info -->
+        <div class="location-map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d68627.79085143223!2d141.50487306988876!3d40.52062898081761!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5f9b4d429cc8fcaf%3A0xa1e9dfb0013cda!2z5YWr5oi45YWs5ZyS44GT44Gp44KC44Gu5Zu9!5e0!3m2!1sja!2sjp!4v1620104141421!5m2!1sja!2sjp" width="800" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div><!-- /.location-map -->
+    </div><!-- /.wrapper -->
+</section>
+
+<section id="sns">
+    <div class="wrapper">
+        <div class="sns-box">
+            <h3 class="sub-title">Facebook</h3>
+            <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2F%25E3%2583%2595%25E3%2583%25AA%25E3%2583%25BC%25E3%2583%25A9%25E3%2583%25B3%25E3%2582%25B9%25E3%2581%25AE%25E5%25AE%25BF-102409812018577&tabs=timeline&width=340&height=315&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="340" height="315" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+        </div>
+
+        <div class="sns-box">
+            <h3 class="sub-title">Twitter</h3>
+            <blockquote class="twitter-tweet"><p lang="ja" dir="ltr">2040 未来からの提言 <a href="https://t.co/Km1Sn8zT5j">https://t.co/Km1Sn8zT5j</a> <a href="https://twitter.com/hashtag/NewsPicks?src=hash&amp;ref_src=twsrc%5Etfw">#NewsPicks</a> <a href="https://twitter.com/hashtag/%E6%88%90%E6%AF%9B%E7%9C%9E?src=hash&amp;ref_src=twsrc%5Etfw">#成毛眞</a> <br>これからの日本の未来を考えなければいけないと強く思う。</p>&mdash; perpetualtravelerchoja (@perpetualchoja) <a href="https://twitter.com/perpetualchoja/status/1370711510985568258?ref_src=twsrc%5Etfw">March 13, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        </div>
+
+        <div class="sns-box">
+            <h3 class="sub-title">Youtube</h3>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/MNzTG7VrDUY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </div><!-- /.wrapper -->
+</section>
+
+ 
+
+{% endblock %}
